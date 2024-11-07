@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation for demo purposes
+            if (username === 'admin' && password === 'password') {
+                alert('Login successful!');
+                window.location.href = 'currency_converter.html';
+            } else {
+                alert('Login failed. Please check your credentials.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form onsubmit="event.preventDefault(); validateLogin();">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
